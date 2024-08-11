@@ -1,0 +1,107 @@
+<!--start emit-->
+
+<div class="home d-flex justify-content-center">
+  <div class="grid-container">
+    <form (keydown.enter)="$event.preventDefault()" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="grid-item title pt-3">
+        <h1>إصدار وثيقة معمودية</h1>
+        <div class="search position-relative">
+          <input (keydown.enter)="search($event)" type="search ">
+          <img src="../../../assets/images/search.svg">
+        </div>
+
+        <div>
+          <span>
+            <select [(ngModel)]="selectedChid" [ngModelOptions]="{standalone: true}">
+              <option *ngFor="let item of _churches" [value]="item.id">
+                {{item.name}}
+              </option>
+            </select>
+            الكنيسة
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-item sp d-flex justify-content-center align-items-center pt-2 mt-3">
+        <span><label for="1">إسم الكاهن</label><input type="text" placeholder="" name="1"></span>
+        <span><label for="2">رقم الوثيقة</label><input type="number" placeholder="" formControlName="number" name="2"></span>
+        <span>
+          <label for="3">اسم الكنيسة</label>
+          <select formControlName="chID" name="3">
+            <option *ngFor="let item of _churches" [value]="item.id">
+              {{item.name}}
+            </option>
+          </select>
+          
+        </span>
+      </div>
+
+      <div class="grid-item details">
+        <div formGroupName="per" class="data d-flex pe-3 ps-5">
+          <button type="button" (click)="selectPerson()" class="mb-3 mt-3">تحديد</button>
+
+          <label>الإسم</label>
+          <input [readOnly]="true" type="text" placeholder="" formControlName="firstName">
+          <label>الشهرة</label>
+          <input [readOnly]="true" type="text" placeholder="" formControlName="lastName">
+          <label>إسم الأب</label>
+          <input [readOnly]="true" type="text" placeholder="" formControlName="fatherName">
+          <label>إسم الأم</label>
+          <input [readOnly]="true" type="text" placeholder="" formControlName="motherName">
+          <label>رقم القيد</label>
+          <input [readOnly]="true" type="text" placeholder="" formControlName="constraintNumber">
+          <label>الرقم الوطني</label>
+          <input (blur)="onNationalIdBlur($event)" type="text" placeholder="" formControlName="nationalNumber">
+        </div>
+
+        <div class="flex d-flex">
+          <div class="arab details mt-5">
+            <div class="right d-flex">
+              <label>اسم الكاهن المعمد</label>
+              <input type="text" placeholder="" formControlName="baptizingPriestName">
+              <label>مكان العماد</label>
+              <input type="text" placeholder="" formControlName="baptismPlace">
+              <label>تاريخ العماد</label>
+              <mat-form-field class="form-field custom-width custom-height" appearance="outline">
+                <input matInput [matDatepicker]="pickerbaptismDate" formControlName="baptismDate">
+                <mat-datepicker-toggle matIconSuffix [for]="pickerbaptismDate"></mat-datepicker-toggle>
+                <mat-datepicker #pickerbaptismDate></mat-datepicker>
+              </mat-form-field>
+            </div>
+
+            <div class="left d-flex">
+              <label>الإسم الكنيسي</label>
+              <input type="text" placeholder="" formControlName="nameInChurch">
+              <label>العراب</label>
+              <input type="text" placeholder="" formControlName="godFatherName">
+              <label>العرابة</label>
+              <input type="text" placeholder="" formControlName="godMotherName">
+            </div>
+          </div>
+          <div class="select d-flex justify-content-center ">
+            <span class="text-center mb-5">صدرت بتاريخ</span>
+            <mat-form-field class="form-field custom-width custom-height mb-5" appearance="outline">
+              <input matInput [matDatepicker]="pickerissuanceDate" formControlName="issuanceDate">
+              <mat-datepicker-toggle matIconSuffix [for]="pickerissuanceDate"></mat-datepicker-toggle>
+              <mat-datepicker #pickerissuanceDate></mat-datepicker>
+            </mat-form-field>
+            <div class="check me-4 mb-5 mt-1">
+              <span>تم التصديق</span>
+              <input type="checkbox" formControlName="certified" >
+             
+            </div>
+          </div>
+
+          <div class="print d-flex">
+            <button (click)="printData()" value="حفظ" type="submit" class="text-center mb-5">طباعة</button>
+            <button [disabled]="DocumentIsLocked" value="حفظ" type="submit" class="text-center mb-5">حفظ</button>
+          </div>
+        </div>
+        </div>
+
+
+    </form>
+  </div>
+</div>
+
+<!--End emit-->

@@ -1,0 +1,112 @@
+/* تصميم الشبكة الأساسي */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.2fr 7.8fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-bottom-color: gray;
+  background-color: var(--main-color);
+}
+
+.right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.right .black-cross {
+  width: 40px;
+  height: 40px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.left .logo {
+  width: 90px;
+  height: 90px;
+}
+
+.btn {
+  color: white;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.row1 {
+  grid-column: 1 / -1;
+}
+
+.row2col1 {
+  grid-column: 1 / 2;
+}
+
+.row2col2 {
+  grid-column: 2 / -1;
+}
+
+.top h1 {
+  margin-right: 50px;
+}
+
+/* تصميم متجاوب للشاشات الصغيرة والمتوسطة */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .row1 {
+    grid-column: 1 / -1;
+  }
+
+  .row2col1,
+  .row2col2 {
+    grid-column: 1 / -1;
+  }
+
+  .top {
+    justify-content: flex-end; /* محاذاة الجزء المتبقي إلى اليمين */
+  }
+
+  .right {
+    display: none; /* إخفاء القسم الأيمن */
+  }
+
+  .left {
+    flex-direction: column;
+    align-items: center; /* مركزية العناصر في القسم الأيسر */
+  }
+
+  .top h1 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .left .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .right .black-cross {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+}

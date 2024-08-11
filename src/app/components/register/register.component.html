@@ -1,0 +1,77 @@
+<div class="component-main-container" style="margin-top: 2%;">
+  <h1  style="display: flex; justify-content: center; align-items: center; flex-direction: column;font-weight: bold;color: #636060; font-size: 40px;">{{title}}</h1>
+
+  <div class="form-container">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-center mt-5" >
+
+
+      <div>
+
+        <input   type="text" formControlName= "userName" required>
+        <label  style="font-size: 20px;">:إسم المستخدم
+        </label>
+    </div>
+
+        <div class="" >
+
+          <input   type="text" formControlName="email" required>
+          <label  style="font-size: 20px;">:البريد الإلكتروني
+          </label>
+      </div>
+
+
+
+
+
+        <div  *ngIf="!iseditmode"class="me-4" >
+
+          <input type="password" formControlName="password" >
+          <label >:كلمة المرور
+          </label>
+        </div>
+
+
+
+
+
+<div class="group d-flex justify-content-center">
+<div class="form-group"   >
+  <span><select formControlName="role">
+      <option *ngFor="let item of Allroles" [value]="item">
+      {{item}}
+      </option>
+    </select>الدور</span>
+</div>
+        <div class="form-group "   >
+          <span ><select formControlName="chID">
+              <option *ngFor="let item of churches" [value]="item.id">
+              {{item.name}}
+              </option>
+            </select>اسم الكنيسة</span>
+        </div>
+
+
+      </div>
+
+
+
+
+
+<div class="closeSaved-flex justify-content-center">
+       <div  >
+        <button class="add" type="submit">
+      حفظ
+        </button>
+
+       <!----<button
+        [routerLink]="['/users']"
+         >
+إغلاق
+        </button>-->
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

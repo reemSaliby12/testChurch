@@ -1,0 +1,151 @@
+/* تنسيقات أساسية */
+.home {
+  display: flex;
+  justify-content: center;
+  padding: 20px; /* إضافة مساحة داخلية حول المحتوى */
+}
+
+.churches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+table, thead, tr, th, td {
+  border: 1px solid black;
+  color: black;
+
+}
+
+th {
+  color: white;
+  background-color: var(--main-color); /* اضف لون خلفية لرؤوس الأعمدة */
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  margin-top: 10px;
+  width: 100%; /* جعل عنصر البحث يتكيف مع عرض الأب */
+  max-width: 300px; /* تحديد حد أقصى للعرض */
+}
+
+.search input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.search img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  table-layout: auto;
+  border-collapse: collapse; /* إزالة الفراغات بين الخلايا */
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: center;
+  word-wrap: break-word; /* التفاف النص داخل الخلية */
+}
+
+.add {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 1200px) {
+  .table th, .table td {
+    padding: 10px;
+  }
+
+  .search {
+    max-width: 250px; /* تقليل الحد الأقصى للعرض للشاشات المتوسطة */
+  }
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 8px;
+    font-size: 14px; /* تصغير حجم النص */
+  }
+
+  .search {
+    max-width: 200px; /* تقليل الحد الأقصى للعرض للشاشات الصغيرة */
+  }
+
+  .add {
+    padding: 8px 16px;
+    font-size: 14px; /* تصغير حجم الزر */
+  }
+}
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 320px;
+  }
+
+  thead tr {
+    position: absolute;
+  
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  td {
+ /* تطبيق الحواف */
+    padding-left: 50%;
+    text-align: right!important;
+    position: relative;
+    color: black; /* لون النص */
+    background-color: white; /* لون الخلفية */
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: calc(50% - 20px);
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    color:var(--main-color); /* لون النص لاسم الحقل */
+    background-color:white; /* لون الخلفية لاسم الحقل */
+    border-right: 1px solid black; /* الحافة على الجانب الأيمن لاسم الحقل */
+    /* إضافة بعض المساحة حول النص */
+  }
+
+  td:last-child {
+    text-align: center;
+  }
+
+  .d {
+    margin: 0 5px;
+  }
+
+ 
+}
+
+

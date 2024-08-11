@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+
+.home .photo {
+  background-image: url(../../../assets/images/pray.jpg);
+ background-size: cover;
+ width: 100%;
+ height: 100vh;
+
+
+
+}
+
+.photo h2{
+  backdrop-filter:blur(7px);
+  font-size: 30px;
+  z-index: 1;
+
+}

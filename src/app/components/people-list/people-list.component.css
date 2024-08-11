@@ -1,0 +1,39 @@
+.home{
+  flex-direction: column;
+  justify-content:flex-end;
+ min-width: 400px;
+}
+.search input{
+  border: 2px solid black;
+  border-radius: 50%;
+height: 60px;
+background-color: #eee;
+border: transparent;
+width: 60px;
+
+}
+.search input:hover,
+.search input:focus{
+  border-color: var(--main-color);
+}
+.search img{
+  position: absolute;
+  right: 280px;
+ top: 25%;
+  height: 35px;
+
+
+}
+.selNamNum input{
+  width: 120px;
+  margin-top: 20px;
+}
+.selNamNum{
+  width: 600px;
+
+justify-content: space-around;
+}
+.selNamNum label{
+  margin-left: 5px;
+}
+

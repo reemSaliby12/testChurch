@@ -1,0 +1,10 @@
+::ng-deep .mat-tab-group .mat-tab-labels {
+  min-height: 650px;
+}
+
+::ng-deep .mat-tab-group .mat-tab-label {
+  min-width: 600px;
+}
+::ng-deep .mat-tab-body-wrapper {
+  min-height: calc(100% - 60px); /* تعديل ارتفاع محتوى التبويب */
+}

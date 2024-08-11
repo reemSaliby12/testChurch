@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root{
+  --main-color:rgba(106, 18, 18, 0.8);
+  --white-color:white;
+
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.add{
+  color: var(--white-color);
+   outline: none;
+   border: transparent;
+    background-color: var(--main-color);
+  border-radius: 20px;
+  padding: 20px 40px;
+  font-size: 1.5rem;}
+
+  .search input{
+    border: 2px solid black;
+    border-radius: 10px;
+  height: 30px;
+  background-color: #eee;
+  border: transparent;
+  width: 200px;
+  padding-right: 10px;
+  }
+  .search input:focus+ img ,
+  .search input.filled+ img{
+   opacity: 0;
+   outline: none;
+  }
+  .search img{
+    position: absolute;
+  right: 5px;
+  top: 6px;
+  height: 20px;
+  }
+  table,thead,tr,th,td{
+    border: 1px solid black;
+  color: black;
+  }
+  table{
+    margin: 0 auto;
+  
+  }
+  
+   table th{
+    background-color: var(--main-color);
+  color: white;
+    padding: 15px;
+  }
+ table td{
+    padding: 5px;
+  }
+.title h1{
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+.d{
+  background-color: rgba(83, 76, 76, 0.816);
+ margin: 5px;
+  border-radius: 5px;
+width: 60px;
+height: 40px;
+outline: none;
+background-color:rgba(187, 178, 178, 0.493);
+border: transparent;
+  color: black;
+
+}
+
+
+
+
+/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 1096px) {
+
+
+  .details input{
+  width: 100px;
+  }
+.grid-container{
+flex-direction: column;
+}
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@media (max-width: 768px) {
+  .sp {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sp label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

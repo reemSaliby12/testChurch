@@ -1,0 +1,150 @@
+.login {
+  background-image: url(../../../assets/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 0;
+}
+
+.login button {
+  width:180px;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+.login a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 20px;
+ 
+
+}
+
+form {
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  border: 2px solid #eee;
+  border-radius: 5px;
+  height: 66%;
+  width: 26%;
+  font-size: 1.2rem;
+
+}
+::placeholder{
+  color: rgb(63, 62, 62);
+  font-size: 0.9rem;
+}
+
+/* .textLogin{
+  position: relative;
+  display:flex;
+  justify-content: space-between;
+}
+.textLogin .img-pass{
+  position: absolute;
+ right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+} */
+
+
+form input {
+  border: solid 1px black;
+  border-radius: 20px;
+  background-color: transparent;
+ 
+  outline: none;
+  color: #eee;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+form input.ng.invalid.ng.touched {
+  border: 1px solid red;
+}
+
+form input:focus+img,
+form input.filled+img {
+  opacity: 0;
+  outline: none;
+}
+
+.img-user,
+.img-pass {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 86px;
+
+}
+
+.img-user {
+  top: 196px;
+}
+
+.img-pass {
+  top: 306px;
+}
+@media(min-width:993px) {
+  form{
+    width: 30%;
+    height: 80%;
+    }
+    h1{
+      font-size:1.5rem;
+    }
+}
+@media (max-width:992px){
+  form{
+    width: 40%;
+    height: 85%;
+    }}
+
+
+@media(max-width:767px) {
+  form{
+    width: 40%;
+    height: 80%;
+    font-size: 1rem;
+  }
+.logo{
+  width: 70px;
+  height: 70px;
+}
+.login button{
+  width:140px;
+  height: 40px;
+}}
+  @media (max-width:667px) {
+    form{
+      width: 50%;
+      height: 76%;
+    }
+    .login a{
+      font-size: 10px;
+    }
+
+    
+  }
+@media(max-width:480px){
+  form{
+    width: 65%;
+    height: 70%;}
+   
+  }
+

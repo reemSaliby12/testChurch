@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bondi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!--start login-->
+
+  <div class="login d-flex  justify-content-center  align-items-center">
+    <img src="../../../assets/images/logo.svg" class="logo ">
+
+    <form [formGroup]="form" (ngSubmit)="Performlogin()"
+      class=" d-flex  justify-content-center  align-items-center  text-light">
+
+      <h1 class="mb-5">تسجيل الدخول</h1>
+      <label for="fname">إسم المستخدم</label>
+      <div class="textLogin">
+      <input type="text" class=" user-name position-relative" placeholder="أدخل إسمك"
+        formControlName="userName">
+    <!-- <img src="../../../assets/images/ic-user.svg" class="img-user">--> 
+    </div>
+
+      <br>
+      <label for="lname">كلمة السر</label>
+      <div class="textLogin">
+      <input type="password" class=" password position-relative " placeholder="أدخل كلمة المرور"
+        formControlName="password" required>
+    <!-- <img src="../../../assets/images/iconkey.svg" class="img-pass">-->
+    </div>
+
+      <br>
+      <button type="submit">
+        <a class="d-flex justify-content-center align-items-center">تسجيل الدخول</a></button>
+    </form>
+  </div>
+  <!--End login-->

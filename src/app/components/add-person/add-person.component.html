@@ -1,0 +1,81 @@
+
+
+<div class="home d-flex ">
+  <div class="grid-container">
+
+ <div class="grid-item title pt-3">
+  <h1>إضافة شخص</h1>
+  <div class="search position-relative">
+   <input (keydown.enter)="search($event)" type="search ">
+<img src="../../../assets/images/search.svg">
+  </div>
+ </div>
+
+ <!--
+  <div class="grid-item sp d-flex justify-content-center align-items-center pb-2 pt-2">
+   <span ><input type="text" placeholder="" formControlName="Kname">إسم الكاهن</span>
+
+   <span > <input type="number" placeholder=""  formControlName="number">رقم الوثيقة</span>
+
+   <span><input type="text" placeholder=""  formControlName="churche">إسم الكنيسة</span>
+
+
+ </div>
+-->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+ <div class="grid-item details "><div class="right d-flex">
+   <label>الإسم</label>
+   <input type="text" placeholder=""  formControlName="firstName">
+   <label>الشهرة</label>
+   <input type="text" placeholder="" formControlName="lastName">
+   <label>الإسم الكنيسي</label>
+   <input type="text" placeholder="" formControlName="nameInChurch">
+   <label>إسم الأب</label>
+   <input type="text" placeholder=""  formControlName="fatherName">
+   <label>إسم الأم</label>
+   <input type="text" placeholder="" formControlName="motherName">
+   <label>الرقم الوطني</label>
+   <input type="text" placeholder=""  formControlName="nationalNumber">
+ </div>
+<div class="left d-flex">  <label>محل القيد</label>
+ <input type="text" placeholder=""  formControlName="constraintPlace">
+ <label>رقم القيد</label>
+ <input type="text" placeholder=""  formControlName="constraintNumber">
+ <label>رقم الموبايل</label>
+ <input type="text" placeholder=""  formControlName="phon">
+ <label>العنوان</label>
+ <input type="text" placeholder=""  formControlName="adress">
+ <label>مكان الولادة</label>
+ <input type="text" placeholder=""  formControlName="placeOfBirth">
+ <label>تاريخ الولادة</label>
+<!-- <input      type="date"  placeholder=""  formControlName="birthDate"> -->
+
+<mat-form-field class="dateform-field custom-width" appearance="outline">
+    <input matInput [matDatepicker]="pickermFgDate" formControlName="birthDate">
+ <mat-datepicker-toggle matIconSuffix [for]="pickermFgDate"></mat-datepicker-toggle>
+ <mat-datepicker #pickermFgDate></mat-datepicker>
+</mat-form-field>
+
+
+</div>
+</div>
+<div class="grid-item gender">
+
+ <div class="d-flex ">
+  <h3 class="fw-b">الجنس</h3>
+  <label for="female">أنثى</label>
+   <input type="radio" id="Rdbtnfemale" name="gender"   >
+   <label for="male">ذكر</label>
+ <input type="radio" id="Rdbtnmale" name="gender"  >
+
+
+</div>
+<div class="grid-item mt-5 me-5  "><button type="submit" >حفظ</button></div>
+<!--[routerLink]="['/header/people']"-->
+</div>
+</form>
+
+  </div>
+
+</div>

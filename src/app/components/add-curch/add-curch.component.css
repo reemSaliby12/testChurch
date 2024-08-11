@@ -1,0 +1,67 @@
+
+.home{
+  flex-direction: column;
+
+}
+form{
+  flex-direction: column;
+}
+.churches{
+  flex-direction: column;
+
+}.flex{
+  flex-direction: column;
+
+  }
+  .right,.left{
+    flex-direction: column;
+  }
+  .arab{
+    display: flex;
+   
+    gap: 50px;
+  }
+  .details input{
+    margin-bottom: 20px;
+    height: 40px;
+
+    width: 300px
+  }
+  button{
+    color: var(--white-color);
+     outline: none;
+     border: transparent;
+      background-color: var(--main-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;}
+  label{
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+  }
+  .search input{
+  border: 2px solid black;
+  border-radius: 10px;
+height: 30px;
+background-color: #eee;
+border: transparent;
+width: 200px;
+}
+.search input:hover,
+.search input:focus{
+  border-color: var(--main-color);
+}
+.search img{
+  position: absolute;
+right: 5px;
+top: 6px;
+height: 20px;
+}
+@media(max-width:600px){
+  .arab{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

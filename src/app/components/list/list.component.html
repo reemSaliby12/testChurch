@@ -1,0 +1,53 @@
+<!-- sidebar.component.html -->
+<div class="list ms-auto" [ngClass]="{ 'active': isActive }">
+
+  <ul class="links sidebar-menu list-unstyled pt-3 ps fs-6">
+    <li *appHasRole='["Bishop","SystemAdmin"]'>
+      <a routerLink="church"> 
+        <img src="../../../assets/images/chuerch.svg">
+    الكنائس </a>
+    </li>
+    <li *appHasRole='["Bishop","SystemAdmin"]'>
+      <a routerLink="users">
+        <img src="../../../assets/images/white.svg">
+     الكهنة</a>
+    </li>
+    <li>
+      <a routerLink="people">
+        <img src="../../../assets/images/people.svg">
+       الرعية</a>
+    </li>
+    <li>
+      <a routerLink="baptism">
+        <img src="../../../assets/images/cross.svg">
+     إصدار وثيقة معمودية</a>
+    </li>
+    <li> <a routerLink="status"> 
+      <img src="../../../assets/images/rings.svg">
+     إصدار وثيقة مطلق حال</a>
+    </li>
+    <li *appHasRole='["Bishop","SystemAdmin"]'>
+      <a routerLink="marriage">
+      <img src="../../../assets/images/marrieg.svg">
+     وثيقة زواج</a>
+    </li>
+    <li *appHasRole='["Bishop","SystemAdmin"]'>
+      <a routerLink="divorce">
+      <img src="../../../assets/images/inherited">
+     وثيقة طلاق</a>
+    </li>
+    <li *appHasRole='["Bishop","SystemAdmin"]'>
+      <a routerLink="death"> 
+      <img src="../../../assets/images/death">
+   وثيقة وفاة</a>
+    </li>
+    <li *appHasRole='["Bishop","SystemAdmin"]'>
+      <a routerLink="inherited"> 
+      <img src="../../../assets/images/divorce.svg">
+    وثيقة حصر إرث</a>
+    </li>
+  </ul>
+</div>
+<div class="content " (click)="toggleSidebar()" [class.hidden]="isActive">
+  <img src="../../../assets/images/mune.svg" width="40px" height="30px">
+</div>

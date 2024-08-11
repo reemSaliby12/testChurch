@@ -1,0 +1,66 @@
+
+
+<div class="home d-flex ">
+
+<div class="selNamNum d-flex  mt-3">
+  <div class="left">
+    <label>الاسم</label>
+    <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone:true}">
+
+
+<br>
+<label>اسم الأب</label>
+<input type="text" [(ngModel)]="fatherName" [ngModelOptions]="{standalone:true}">
+
+
+<br>
+</div>
+  <div class="right">
+    <label>الشهرة</label>
+    <input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone:true}">
+
+
+    <br>
+    <label>الرقم الوطني</label>
+        <input type="text" [(ngModel)]="nationalId" [ngModelOptions]="{standalone:true}">
+
+
+
+
+      </div>
+
+
+</div>
+  <div class="search position-relative text-center">
+    <input (click)="performSearch()"  type="search ">
+    <img src="../../../assets/images/search.svg">
+   </div>
+
+ <h2 class="text-center mt-4">نتيجة البحث</h2>
+
+  <table class="mt-3">
+
+    <tr>
+      <th>الاسم</th>
+      <th>اسم الأب</th>
+      <th>الشهرة</th>
+      <th>الرقم الوطني</th>
+
+      <th>إجراء</th>
+    </tr>
+
+
+      <tr *ngFor="let item of personsforView">
+          <td> {{item.firstName}}</td>
+          <td> {{item.fatherName}}</td>
+          <td> {{item.lastName}}</td>
+          <td> {{item.nationalNumber}}</td>
+          <td>
+            <button (click)="selectperson(item.id)" >تحديد</button>
+          </td>
+      </tr>
+
+  </table>
+
+
+</div>

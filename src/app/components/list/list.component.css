@@ -1,0 +1,111 @@
+/* sidebar.component.css */
+.list {
+  position: absolute;
+  height: 100%;
+  background-color: var(--main-color);
+  color: white;
+  text-align: right;
+  right: -250px;
+  /* مخفي بشكل افتراضي */
+  transition: right 0.4s ease-in-out;
+  overflow-y: auto;
+  /* For scrolling */
+  width: 190px;
+  height: 110vh;
+}
+
+.list.active {
+  right: 0;
+  /* يظهر عند تفعيله */
+}
+
+/* .sidebar-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+} */
+
+
+.sidebar-menu li:hover {
+  background-color: #575757;
+}
+
+.content {
+  margin-left: 0;
+  /* تعديل الهامش حسب عرض الشريط الجانبي */
+  transition: margin-left 0.3s ease;
+}
+
+.content .active {
+
+  margin-left: 250px;
+  /* تعديل الهامش عند فتح الشريط الجانبي */
+}
+
+/*.content.hidden {
+  display: none;
+}*/
+
+
+.list.open {
+  display: block;
+}
+
+.links li {
+  margin-bottom: 14px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--white-color);
+
+
+
+}
+
+.list ul li img {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  width: 20px;
+  height: 40px;
+  margin-left: 5px;
+
+
+}
+
+.menue {
+  position: absolute;
+
+  color: var(--main-color);
+
+}
+
+.content {
+  display: flex;
+  color: var(--white-color);
+  margin-right: 10px;
+  position: absolute;
+  top: 40px;
+  height: 40px;
+  align-items: center;
+  z-index: 1000;
+}
+
+@media(max-width:767px) {
+  .list {
+   top: 90px;
+    height: 120vh;
+    z-index: 1000;
+   background-color: rgb(114, 38, 38);
+  }
+  .content{ 
+   top: 22px;
+   right: 40px;
+  }
+}
